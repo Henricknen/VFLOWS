@@ -12,7 +12,6 @@
 <body>
     <div id="loading-modal" style="display: none;">
         <p>Enviando dados, aguarde...</p>
-        <img src="caminho-para-o-seu-spinner.gif" alt="Loading Spinner">
       </div>
       
     <div class="container mt-4">
@@ -21,7 +20,8 @@
             <span>Cadastro Fornecedor/Produto</span>
         </div>        
         
-        
+        <iframe src="visualizar_json.php" style="width: 100%; height: 2px;"></iframe>
+
     <form id="forn" class="container mt-4">
         <p>Dados do fornecedor</p>
         <div class="row">
@@ -124,7 +124,8 @@
         </div>
     
     </form>
-    <form id="tab_pro" class="container mt-4">
+    <form id="tab_pro" class="container mt-4" method="POST" action="salvando_produtos.js">
+    
         <p class="mt-4">Tabela de Produtos</p>
         <caption>Produto - 1</caption>
         <table id="table" style="border-radius: 10px; border-collapse: separate; border-spacing: 10px;">
@@ -133,7 +134,7 @@
                     <img id="img_produtos" src="img/compra.png" alt="Imagem de Produto">
                     Produto
                 </th>
-                <th><input type="text" id="radius" name="descricao" style="width: 500" required></th>
+                <th><input type="text" id="radius" name="produto1" style="width: 500" required></th>
             </tr>
             <tr>
                 <br>
@@ -143,10 +144,10 @@
                 <th>Valor Total</th>
             </tr>
             <tr>
-                <td><input type="text" id="radius" name="unidade-medida" required></td>
-                <td><input type="number" id="radius" name="quantidade-estoque" required></td>
-                <td><input type="text" id="radius" name="valor-unitario" required></td>
-                <td><input type="text" id="radius" name="valor-total" readonly></td>
+                <td><input type="text" id="radius" name="unidade-medida1" required></td>
+                <td><input type="number" id="radius" name="quantidade-estoque1" required></td>
+                <td><input type="text" id="radius" name="valor-unitario1" required></td>
+                <td><input type="text" id="radius" name="valor-total1" readonly></td>
             </tr>
         </table>
         <br>
@@ -157,7 +158,7 @@
                     <img id="img_produtos" src="img/compra.png" alt="Imagem de Produto">
                     Produto
                 </th>
-                <th><input type="text" id="radius" name="descricao" style="width: 500" required></th>
+                <th><input type="text" id="radius" name="produto2" style="width: 500" required></th>
             </tr>
             <tr>
                 <th>UND. Medida</th>
@@ -166,17 +167,17 @@
                 <th>Valor Total</th>
             </tr>
             <tr>
-                <td><input type="text" id="radius" name="unidade-medida" required></td>
-                <td><input type="number" id="radius" name="quantidade-estoque" required></td>
-                <td><input type="text" id="radius" name="valor-unitario" required></td>
-                <td><input type="text" id="radius" name="valor-total" readonly></td>
+                <td><input type="text" id="radius" name="unidade-medida2" required></td>
+                <td><input type="number" id="radius" name="quantidade-estoque2" required></td>
+                <td><input type="text" id="radius" name="valor-unitario2" required></td>
+                <td><input type="text" id="radius" name="valor-total2" readonly></td>
             </tr>
-            
         </table>
         <br>
-        <button id="button">Adicionar Produto</button>
+        <button type="submit" id="button">Adicionar Produto</button>
         <br>
     </form>
+    
     <form id="anex" class="container mt-4">
        <p>Anexos</p>
        <caption>Itens</caption>
@@ -206,6 +207,7 @@
     </form>
     <br>
         <button id="save-button">Salvar Fornecedor</button>
+        <script src="js/script.js"></script>
     <br>
 </body>
 </html>

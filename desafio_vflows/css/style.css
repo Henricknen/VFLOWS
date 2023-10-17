@@ -35,8 +35,8 @@ label {
     border: 1px solid black;
     border-radius: 10px;
     width: 100%;
-    border-collapse: separate; /* Alterado para "separate" para permitir o uso de "border-spacing" */
-    border-spacing: 10px; /* Adicionado espaçamento entre células */
+    border-collapse: separate;
+    border-spacing: 10px;
 }
 
 #forn {
@@ -55,7 +55,7 @@ label {
 }
 
 #table th, #table td {
-    border-radius: 10px; /* Define cantos arredondados igualmente em todos os cantos */
+    border-radius: 10px;
 }
 
 th, td {
@@ -72,7 +72,7 @@ th, td {
 
 #adc {
     background-color: #019E0F;
-    color: white; /* Adicionada cor de texto para melhor legibilidade */
+    color: white;
 }
 
 #border {
@@ -81,7 +81,7 @@ th, td {
 
 #radius {
     border-radius: 8px;
-    padding: 5px; /* Adicionado espaçamento interno para inputs com borda arredondada */
+    padding: 5px;
 }
 
 #button, #save-button {
