@@ -1,5 +1,5 @@
 html, body {
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -23,6 +23,8 @@ p {
     font-weight: bold;
     color: white;
     background-color: #0085B2;
+    width: 100%;
+    padding: 5px 10px;
 }
 
 label {
@@ -31,14 +33,29 @@ label {
 
 #table {
     border: 1px solid black;
-    border-radius: 20;
+    border-radius: 10px;
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate; /* Alterado para "separate" para permitir o uso de "border-spacing" */
+    border-spacing: 10px; /* Adicionado espaçamento entre células */
+}
+
+#forn {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#tab_pro {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#anex {
+    border: 1px solid black;
     border-radius: 10px;
 }
 
 #table th, #table td {
-    border-radius: 10px;
+    border-radius: 10px; /* Define cantos arredondados igualmente em todos os cantos */
 }
 
 th, td {
@@ -55,8 +72,39 @@ th, td {
 
 #adc {
     background-color: #019E0F;
+    color: white; /* Adicionada cor de texto para melhor legibilidade */
 }
 
 #border {
     border: 1px solid #000;
+}
+
+#radius {
+    border-radius: 8px;
+    padding: 5px; /* Adicionado espaçamento interno para inputs com borda arredondada */
+}
+
+#button, #save-button {
+    display: block;
+    width: 100%;
+    background-color: #019E0F;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#logo {
+    vertical-align: middle;
+    margin-right: 10px;
+    float: left;
+}
+
+span {
+    display: inline-block;
+    color: black;
+    vertical-align: middle;
+    font-weight: bold; font-size: 18px;
 }
