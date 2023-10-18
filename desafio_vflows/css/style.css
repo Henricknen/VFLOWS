@@ -29,12 +29,19 @@ p {
     font-weight: bold;
     color: white;
     background-color: #0085B2;
+    border-radius: 5px;
     width: 100%;
     padding: 5px 10px;
 }
 
 label {
     font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
 }
 
 #table1 {
@@ -72,9 +79,10 @@ label {
     border-radius: 10px;
 }
 
-th, td {
+th {
     padding: 8px;
     text-align: left;
+    line-height: 1;
 }
 
 #prod {
@@ -96,9 +104,31 @@ th, td {
 #produto1_radius {
     border-radius: 8px;
     padding: 5px;
+    width: 200px;
 }
 
 #produto2_radius {
+    border-radius: 8px;
+    padding: 5px;
+    width: 200px;
+}
+
+#produto2_unidade-medida {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#produto2_quantidade-estoque {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#produto2_valor-unitario {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#produto2_valor-total {
     border-radius: 8px;
     padding: 5px;
 }
@@ -126,4 +156,14 @@ span {
     color: black;
     vertical-align: middle;
     font-weight: bold; font-size: 18px;
+}
+
+#table {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#table button, #table input[type="file"] {
+    margin-right: 10px;
 }
