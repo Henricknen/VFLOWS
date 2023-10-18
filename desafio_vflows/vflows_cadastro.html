@@ -1,76 +1,75 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Formulário de Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script language="javascript" src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
-
+    <script src="js/anexos.js"></script>
+    <script src="js/calculo_valor_total.js"></script>
+    <script src="js/salvar_fornecedor.js"></script>
+    <script src="js/salvando_produtos.js"></script>
 </head>
+
 <body>
     <div id="loading-modal" style="display: none;">
         <p>Enviando dados, aguarde...</p>
-      </div>
-      
-    <div class="container mt-4">
+    </div>
+
+    <div class="container mt-4" id="forn">
         <div class="text-center">
             <img src="img/logo.png" id="logo" alt="Logo da Empresa">
             <span>Cadastro Fornecedor/Produto</span>
-        </div>        
-        
+        </div>
+
         <iframe src="visualizar_json.php" style="width: 100%; height: 2px;"></iframe>
 
-    <form id="forn" class="container mt-4">
-        <p>Dados do fornecedor</p>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="razao-social" class="form-label">Razão Social</label>
-                    <input type="text" class="form-control" id="border" name="razao-social" required>
+        <form id="forn" class="container mt-4">
+            <p>Dados do fornecedor</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="razao-social" class="form-label">Razão Social</label>
+                        <input type="text" class="form-control" id="border" name="razao-social" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for = "nome-fantasia" class="form-label">Nome Fantasia</label>
+                        <input type="text" class="form-control" id="border" name="nome-fantasia" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cep" class="form-label">CEP</label>
+                        <input type="text" class="form-control" id="border" name="cep" style="width: 300px;" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="endereco" class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="border" name="endereco" required>
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="nome-fantasia" class="form-label">Nome Fantasia</label>
-                    <input type="text" class="form-control" id="border" name="nome-fantasia" required>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="cep" class="form-label">CEP </label>
-                    <input type="text" class="form-control" id="border" name="cep"  style="width: 300px;" required>
-                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="cnpj" class="form-label">CNPJ</label>
+                        <input type="text" class="form-control" id="border" name="cnpj" required>
+                    </div>
 
-                <div class="mb-3">
-                    <label for="endereco" class="form-label">Endereço</label>
-                    <input type="text" class="form-control" id="border" name="endereco" required>
+                    <div class="mb-3">
+                        <label for="inscricao-estadual" class="form-label">Inscrição Estadual</label>
+                        <input type="text" class="form-control" id="border" name="inscricao-estadual">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inscricao-municipal" class="form-label">Inscrição Municipal</label>
+                        <input type="text" class="form-control" id="border" name="inscricao-municipal">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="numero" class="form-label">Número</label>
+                        <input type="text" class="form-control" id="border" name="numero">
+                    </div>
                 </div>
-
-            </div>
-            
-            <div class="col-md-6">
-                
-                <div class="mb-3">
-                    <label for="cnpj" class="form-label">CNPJ</label>
-                    <input type="text" class="form-control" id="border" name="cnpj" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="inscricao-estadual" class="form-label">Inscrição Estadual</label>
-                    <input type="text" class="form-control" id="border" name="border">
-                </div>
-
-                <div class="mb-3">
-                    <label for="inscricao-municipal" class="form-label">Inscrição Municipal</label>
-                    <input type="text" class="form-control" id="border" name="border">
-                </div>    
-
-                <div class="mb-3">
-                    <label for="numero" class="form-label">Número</label>
-                    <input type="text" class="form-control" id="border" name="numero">
-                </div>
-
-            </div>    
 
                 <div class="mb-3">
                     <label for="complemento" class="form-label">Complemento</label>
@@ -79,135 +78,130 @@
                     </div>
                 </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="bairro" class="form-label">Bairro</label>
-                        <input type="text" class="form-control" id="border" name="bairro">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="bairro" class="form-label">Bairro</label>
+                            <input type="text" class="form-control" id="border" name="bairro">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="municipio" class="form-label">Município</label>
+                            <input type="text" class="form-control" id="border" name="municipio">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="estado" class="form-label">Estado</label>
+                            <input type="text" class="form-control" id="border" name="estado">
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="municipio" class="form-label">Município</label>
-                        <input type="text" class="form-control" id="border" name="municipio">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="estado" class="form-label">Estado</label>
-                        <input type="text" class="form-control" id="border" name="estado">
-                    </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="pessoa-contato" class="form-label">Nome da Pessoa de Contato</label>
-                        <input type="text" class="form-control" id="border" name="pessoa-contato" required>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="pessoa-contato" class="form-label">Nome da Pessoa de Contato</label>
+                            <input type="text" class="form-control" id="border" name="pessoa-contato" required>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="telefone" class="form-label">Telefone</label>
-                        <input type="text" class="form-control" id="border" name="telefone">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="text" class="form-control" id="border" name="telefone">
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="border" name="email" required>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="border" name="email" required>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-        </div>
-    
-    </form>
-    <form id="tab_pro" class="container mt-4" method="POST" action="salvando_produtos.js">
-    
-        <p class="mt-4">Tabela de Produtos</p>
-        <caption>Produto - 1</caption>
-        <table id="table" style="border-radius: 10px; border-collapse: separate; border-spacing: 10px;">
-            <tr>
-                <th>
-                    <img id="img_produtos" src="img/compra.png" alt="Imagem de Produto">
-                    Produto
-                </th>
-                <th><input type="text" id="radius" name="produto1" style="width: 500" required></th>
-            </tr>
-            <tr>
+            <br>
+            <button id="save-button">Salvar Fornecedor</button>
+            <br>
+        </form>
+            <form id="tab_pro" class="container mt-4" method="POST" action="js/salvando_produtos.js">
+                <p class="mt-4">Tabela de Produtos</p>
+                    <caption>Produto - 1</caption>
+                    <table id="table1" style="border-radius: 10px; border-collapse: separate; border-spacing: 10px;">
+                        <tr>
+                            <th>
+                                <img id="img_produtos1" src="img/compra.png" alt="Imagem de Produto">
+                                Produto
+                            </th>
+                            <th><input type="text" id="produto1_radius" name="produto1" style="width: 500" required></th>
+                        </tr>
+                        <tr>
+                            <br>
+                            <th>UND. Medida</th>
+                            <th>QTDE em Estoque</th>
+                            <th>Valor Unitário</th>
+                            <th>Valor Total</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="produto1_radius" name="unidade-medida1" required></td>
+                            <td><input type="number" id="produto1_radius" name="quantidade-estoque1" required></td>
+                            <td><input type="text" id="produto1_radius" name="valor-unitario1" required></td>
+                            <td><input type="text" id="produto1_radius" name="valor-total1" readonly></td>
+                        </tr>
+                    </table>
+                    <caption>Produto - 2</caption>
+                    <table id="table2" style="border-radius: 10px; border-collapse: separate; border-spacing: 10px;">
+                        <tr>
+                            <th>
+                                <img id="img_produtos2" src="img/compra.png" alt="Imagem de Produto">
+                                Produto
+                            </th>
+                            <th><input type="text" id="produto2_radius" name="produto2" style="width: 500" required></th>
+                        </tr>
+                        <tr>
+                            <th>UND. Medida</th>
+                            <th>QTDE em Estoque</th>
+                            <th>Valor Unitário</th>
+                            <th>Valor Total</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="produto2_radius" name="unidade-medida2" required></td>
+                            <td><input type="number" id="produto2_radius" name="quantidade-estoque2" required></td>
+                            <td><input type="text" id="produto2_radius" name="valor-unitario2" required></td>
+                            <td><input type="text" id="produto2_radius" name="valor-total2" readonly></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button type="submit" id="button">Adicionar Produto</button>
+                    <br>
+            </form>
+
+            <form id="anex" class="container mt-4">
+                <p>Anexos</p>
+                <div>
+                    <h6 id="table">
+                        <button class="visualizar">
+                            <img id="img_produtos" src="img/olho.jpg" alt="Ícone de Visualizar">
+                        </button>
+                        <button class="excluir">
+                            <img id="img_produtos" src="img/cesto_lixo.png" alt="Ícone de Excluir">
+                        </button>
+                        <input type="file" name="document1" accept=".pdf,.doc,.docx,.png,.jpg" onchange="handleFile(this.files[0])" required>
+                        <br><br>
+                        <button class="visualizar">
+                            <img id="img_produtos" src="img/olho.jpg" alt="Ícone de Visualizar">
+                        </button>
+                        <button class="excluir">
+                            <img id="img_produtos" src="img/cesto_lixo.png" alt = "Ícone de Excluir">
+                        </button>
+                        <input type="file" name="document2" accept=".pdf,.doc,.docx,.png,.jpg" onchange="handleFile(this.files[0])">
+                    </h6>
+                </div>
                 <br>
-                <th>UND. Medida</th>
-                <th>QTDE em Estoque</th>
-                <th>Valor Unitário</th>
-                <th>Valor Total</th>
-            </tr>
-            <tr>
-                <td><input type="text" id="radius" name="unidade-medida1" required></td>
-                <td><input type="number" id="radius" name="quantidade-estoque1" required></td>
-                <td><input type="text" id="radius" name="valor-unitario1" required></td>
-                <td><input type="text" id="radius" name="valor-total1" readonly></td>
-            </tr>
-        </table>
-        <br>
-        <caption>Produto - 2</caption>
-        <table id="table" style="border-radius: 10px; border-collapse: separate; border-spacing: 10px;">
-            <tr>
-                <th>
-                    <img id="img_produtos" src="img/compra.png" alt="Imagem de Produto">
-                    Produto
-                </th>
-                <th><input type="text" id="radius" name="produto2" style="width: 500" required></th>
-            </tr>
-            <tr>
-                <th>UND. Medida</th>
-                <th>QTDE em Estoque</th>
-                <th>Valor Unitário</th>
-                <th>Valor Total</th>
-            </tr>
-            <tr>
-                <td><input type="text" id="radius" name="unidade-medida2" required></td>
-                <td><input type="number" id="radius" name="quantidade-estoque2" required></td>
-                <td><input type="text" id="radius" name="valor-unitario2" required></td>
-                <td><input type="text" id="radius" name="valor-total2" readonly></td>
-            </tr>
-        </table>
-        <br>
-        <button type="submit" id="button">Adicionar Produto</button>
-        <br>
-    </form>
-    
-    <form id="anex" class="container mt-4">
-       <p>Anexos</p>
-       <caption>Itens</caption>
-       <h6 id="table">
+                <button id="button">Incluir Anexos</button>
+            </form>            
+            <br>
             
-                <button class="visualizar">
-                    <img id="img_produtos" src="img/olho.jpg" alt="Ícone de Visualizar">
-                </button>
-                <button class="excluir">
-                    <img id="img_produtos" src="img/cesto_lixo.png" alt="Ícone de Excluir">
-                </button>
-                <label> Nome do Documento 1</label>
-                <br><br>
-                <button class="visualizar">
-                    <img id="img_produtos" src="img/olho.jpg" alt="Ícone de Visualizar">
-                </button>
-                <button class="excluir">
-                    <img id="img_produtos" src="img/cesto_lixo.png" alt="Ícone de Excluir">
-                </button>
-                <label> Nome do Documento 2</label>
-            
-        </h6>
-        </table>
-        <br>
-        <button id="button">Incluir Anexos</button>
-        <br>
-    </form>
-    <br>
-        <button id="save-button">Salvar Fornecedor</button>
-        <script src="js/script.js"></script>
-    <br>
 </body>
+
 </html>
