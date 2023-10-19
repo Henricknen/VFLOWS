@@ -10,12 +10,11 @@
     <script src="js/salvar_fornecedor.js"></script>
     <script src="js/salvando_produtos.js"></script>
     <script src="js/alert.js"></script>
+    <script src="modal.js"></script>
+
 </head>
 
 <body>
-    <div id="loading-modal" style="display: none;">
-        <p>Enviando dados, aguarde...</p>
-    </div>
 
     <div class="container mt-4" id="forn">
         <br>
@@ -23,8 +22,6 @@
             <img src="img/logo.png" id="logo" alt="Logo da Empresa">
             <span>Cadastro Fornecedor/Produto</span>
         </div>
-
-        <iframe src="visualizar_json.php" style="width: 100%; height: 2px;"></iframe>
 
         <div class="container mt-4">
             <form id="forn" method="POST">
@@ -215,6 +212,10 @@
                 <button id="save-button" form="forn">Salvar Fornecedor</button>
         </div>            
         <br>
+        <div id="loading-modal" style="display: none;">
+            <p>Enviando dados...</p>
+          </div>
+          
             
 </body>
 
