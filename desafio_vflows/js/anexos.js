@@ -1,4 +1,3 @@
-// Função para salvar documentos
 function salvarDocumentos(inputFile, documentoKey) {
     if (inputFile.files.length > 0) {
         const file = inputFile.files[0];
@@ -45,13 +44,12 @@ function visualizarDocumento(documentoKey) {
         document.body.removeChild(link);
     }
 }
-
 const document1Input = document.querySelector('input[name="document1"]');
-const document2Input = document.querySelector('input[name="document2"]');
-const buttonExcluir1 = document.querySelector('button.excluir:first-of-type');
-const buttonExcluir2 = document.querySelector('button.excluir:last-of-type');
-const buttonVisualizar1 = document.querySelector('button.visualizar:first-of-type');
-const buttonVisualizar2 = document.querySelector('button.visualizar:last-of-type');
+const document2Input = document.querySelector('input[name="document2');
+const buttonExcluir1 = document.querySelector('button.excluir');
+const buttonExcluir2 = document.querySelector('button.excluir');
+const buttonVisualizar1 = document.querySelector('button.visualizar');
+const buttonVisualizar2 = document.querySelector('button.visualizar');
 
 buttonExcluir1.addEventListener('click', () => excluirDocumento('documento1'));
 buttonExcluir2.addEventListener('click', () => excluirDocumento('documento2'));
@@ -60,6 +58,7 @@ buttonVisualizar2.addEventListener('click', () => visualizarDocumento('documento
 
 document1Input.addEventListener('change', () => salvarDocumentos(document1Input, 'documento1'));
 document2Input.addEventListener('change', () => salvarDocumentos(document2Input, 'documento2'));
+
 
 function verificaDocumentosAnexados() {
     const documento1 = sessionStorage.getItem('documento1');

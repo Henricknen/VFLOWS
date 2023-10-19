@@ -7,9 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/anexos.js"></script>
     <script src="js/calculo_valor_total.js"></script>
-    <script src="js/salvar_fornecedor.js"></script>
     <script src="js/salvando_produtos.js"></script>
-    <script src="js/alert.js"></script>
     <script src="modal.js"></script>
 
 </head>
@@ -24,7 +22,7 @@
         </div>
 
         <div class="container mt-4">
-            <form id="forn" method="POST">
+            <form id="forn" class="container mt-4" method="POST">
                 <p>Dados do fornecedor</p>
                 <div class="row">
                     <div class="col-md-6">
@@ -74,7 +72,7 @@
                     <div class="mb-3">
                         <label for="complemento" class="form-label">Complemento</label>
                         <div class="col-12">
-                            <input type="text" class="form-control" id="border" name="complemento" style="width: 900px;">
+                            <input type="text" class="form-control" id="border" name="complemento" style="width: 883px;">
                         </div>
                     </div>
 
@@ -180,7 +178,6 @@
                     <br>
             </form>
 
-
             <form id="anex" class="container mt-4">
                 <p>Anexos</p>
                 <div>
@@ -211,11 +208,7 @@
             <br>
                 <button id="save-button" form="forn">Salvar Fornecedor</button>
         </div>            
-        <br>
-        <div id="loading-modal" style="display: none;">
-            <p>Enviando dados...</p>
-          </div>
-          
+        <br>        
             
 </body>
 
