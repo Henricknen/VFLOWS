@@ -47,16 +47,19 @@ input {
 #table1 {
     border: 1px solid black;
     border-radius: 10px;
+    /* width: 90%; */
     width: 100%;
     border-collapse: separate;
     border-spacing: 10px;
+    border-spacing: 10px;
 }
-
 #table2 {
     border: 1px solid black;
     border-radius: 10px;
+    /* width: 90%; */
     width: 100%;
     border-collapse: separate;
+    border-spacing: 10px;
     border-spacing: 10px;
 }
 
@@ -167,3 +170,10 @@ span {
 #table button, #table input[type="file"] {
     margin-right: 10px;
 }
+
+.table-container {
+    display: flex;
+    align-items: flex-start; /* Para alinhar o botão com o topo da tabela */
+    margin-bottom: 20px; /* Para adicionar um espaço entre as tabelas */
+}
+
