@@ -1,0 +1,228 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+}
+
+#img_produtos1 {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+#img_produtos2 {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+p {
+    font-weight: bold;
+    color: white;
+    background-color: #0085B2;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+}
+
+#table1 {
+    border: 1px solid black;
+    border-radius: 10px;
+    /* width: 90%; */
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border-spacing: 10px;
+}
+#table2 {
+    border: 1px solid black;
+    border-radius: 10px;
+    /* width: 90%; */
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border-spacing: 10px;
+}
+
+#forn {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#tab_pro {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#anex {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#table th, #table td {
+    border-radius: 10px;
+}
+
+th {
+    padding: 8px;
+    text-align: left;
+    line-height: 1;
+}
+
+#prod {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#adc {
+    background-color: #019E0F;
+    color: white;
+}
+
+#border {
+    border: 1px solid #000;
+}
+#razao-social {
+    border: 1px solid #000;
+}
+#cep {
+    border: 1px solid #000;
+}
+#endereco {
+    border: 1px solid #000;
+}
+#cnpj {
+    border: 1px solid #000;
+}
+#inscricao-estadual {
+    border: 1px solid #000;
+}
+#inscricao-municipal {
+    border: 1px solid #000;
+}
+#numero {
+    border: 1px solid #000;
+}
+#complemento {
+    border: 1px solid #000;
+}
+
+#estado {
+    border: 1px solid #000;
+}
+#municipio {
+    border: 1px solid #000;
+}
+#bairro {
+    border: 1px solid #000;
+}
+#email {
+    border: 1px solid #000;
+}
+
+#pessoa-contato {
+    border: 1px solid #000;
+}
+
+#telefone {
+    border: 1px solid #000;
+}
+
+#nome-fantasia {
+    border: 1px solid #000;
+}
+
+#produto1_radius {
+    border-radius: 8px;
+    padding: 5px;
+    width: 200px;
+}
+
+#produto2_radius {
+    border-radius: 8px;
+    padding: 5px;
+    width: 200px;
+}
+
+#produto2_unidade-medida {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#produto2_quantidade-estoque {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#produto2_valor-unitario {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#produto2_valor-total {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#button, #save-button {
+    display: block;
+    width: 100%;
+    background-color: #019E0F;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#logo {
+    vertical-align: middle;
+    margin-right: 10px;
+    float: left;
+}
+
+span {
+    display: inline-block;
+    color: black;
+    vertical-align: middle;
+    font-weight: bold; font-size: 18px;
+}
+
+#table {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#table button, #table input[type="file"] {
+    margin-right: 10px;
+}
+
+.table-container {
+    display: flex;
+    align-items: flex-start; /* Para alinhar o botão com o topo da tabela */
+    margin-bottom: 20px; /* Para adicionar um espaço entre as tabelas */
+}
+
